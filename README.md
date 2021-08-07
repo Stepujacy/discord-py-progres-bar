@@ -24,6 +24,8 @@ async def progres_bar(ctx):
     draw.text((460,10), text, color2, font=font)
     await ctx.send(file = discord.File("bar02.png"))
 ```
+![alt text](https://cdn.discordapp.com/attachments/871410718224822302/873584604525781054/bar02.png)
+
 
 
 By Stępujący brat#1017 |
