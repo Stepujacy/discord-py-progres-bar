@@ -12,4 +12,5 @@ async def progres_bar(ctx):
     text = f'{x/10}%'
     color2 = (0,0,0)
     draw.text((460,10), text, color2, font=font)
+    im.save('bar02.png')
     await ctx.send(file = discord.File("bar02.png"))
