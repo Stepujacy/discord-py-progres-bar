@@ -1,2 +1,30 @@
 # discord-py-progres-bar
-Discord.py progres bar in pillow
+
+ 
+ Copy
+
+```py
+from PIL import Image, ImageFont, ImageDraw
+from io import BytesIO
+import random
+
+@bot.command()
+async def progres_bar(ctx):
+    im = Image.open('bar01.jpg').convert('RGB')
+    draw = ImageDraw.Draw(im)
+    color=(255,0,0)
+    x = random.randrange(0, 1000)
+    y, diam = 8, 34
+    draw.ellipse([x,y,x+diam,y+diam], fill=color)
+    ImageDraw.floodfill(im, xy=(14,24), value=color, thresh=40)
+    font = ImageFont.truetype("arial.ttf", 30)
+    draw = ImageDraw.Draw(im)
+    text = f'{x/10}%'
+    color2 = (0,0,0)
+    draw.text((460,10), text, color2, font=font)
+    await ctx.send(file = discord.File("bar02.png"))
+```
+
+
+By Stępujący brat#1017 |
+Web http://stepujacyrolplejowiec.fun
