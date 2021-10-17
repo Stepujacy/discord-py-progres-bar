@@ -28,6 +28,3 @@ async def progres_bar(ctx):
 ![alt text](https://cdn.discordapp.com/attachments/871410718224822302/873584604525781054/bar02.png)
 
 
-
-By Stępujący brat#1017 |
-Web http://stepujacyrolplejowiec.fun
